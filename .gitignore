@@ -1,0 +1,13 @@
+# 临时提取文件（docx 解析产生的中间文件）
+extracted_content.txt
+temp_doc.xml
+
+# 测试文件
+hello.txt
+
+# 二进制文档（Word 文档不适合用 Git 版本控制）
+*.docx
+
+# 通用忽略规则
+.DS_Store
+*.log
