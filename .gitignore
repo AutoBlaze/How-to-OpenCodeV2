@@ -3,6 +3,9 @@
 backup/
 备份backup/
 
+# vscode 配置文件
+.vscode/
+
 # 临时提取文件（docx 解析产生的中间文件）
 extracted_content.txt
 temp_doc.xml

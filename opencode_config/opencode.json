@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai",
+  "model": "siliconflow-cn/Pro/moonshotai/Kimi-K2.5",
+  "provider": {
+    "siliconflow-cn": {
+      "options": {
+        "type": "openai-compatible",
+        "baseUrl": "https://api.siliconflow.cn/v1",
+        "apiKey": "sk-your api key"
+      }
+    }
+  },
+  
+  "plugin": []
+  
+  
+}
