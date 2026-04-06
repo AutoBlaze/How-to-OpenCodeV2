@@ -1,3 +1,8 @@
+# 备份文件夹
+备份/
+backup/
+备份backup/
+
 # 临时提取文件（docx 解析产生的中间文件）
 extracted_content.txt
 temp_doc.xml
