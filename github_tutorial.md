@@ -225,3 +225,42 @@ git push
 - **频繁提交**：建议每次完成一个小功能就提交一次，不要攒太多
 - **说明要清晰**：`-m` 后面的说明要让人一看就知道这次改了什么
 - **先 pull 再 push**：如果多人协作，push 前先 `git pull` 拉取最新代码，避免冲突
+
+#关于撤回
+
+## 场景一：只在本地commit，未push到远程
+如果你只是本地 commit 了，想撤销并重新修改，可以使用 git reset。
+1. 撤销 commit，保留修改内容（推荐）
+如果你想撤销这次提交，但不想丢失你写好的代码（保留在暂存区，可以直接再次 commit），使用：
+bash
+git reset --soft HEAD^
+HEAD^ 表示上一次提交。
+--soft 会让修改回到「暂存区」（即 git add 后的状态）。 
+2. 撤销 commit，放弃修改内容（谨慎使用）
+如果你想彻底回到提交前的状态，放弃本次提交的所有代码修改，使用：
+bash
+git reset --hard HEAD^
+警告：该操作会彻底删除你的修改，文件恢复到上一次提交的状态
+3. 撤销commit，修改只在本地，未add
+如果想撤销提交，并把修改内容放到工作区（撤回暂存区，未 git add），使用：
+bash
+git reset HEAD^
+
+## 场景二：已push到远程仓库（GitHub）
+如果 commit 已经 push，不能直接使用 reset，否则会破坏他人代码，需使用 revert。
+1. 使用 git revert 撤销提交（推荐）
+git revert 会生成一个新的提交，用来撤销前一次提交的内容。这是最安全的方法。 
+bash
+git revert <commit_id>
+git push origin <分支名>
+<commit_id> 是你要撤销的那次提交的哈希值。
+操作后，远程记录会新增一个“Revert ...”的提交，本地代码也会随之回滚。
+2. 使用 git reset 强制覆盖（极度危险）
+如果你确信由于某些原因必须删除远程的历史记录（没人协作时使用）：
+本地回退：git reset --hard <commit_id>。
+强制推送到远程：git push -f origin <分支名>。 
+
+## 场景三：如果你只是想修改最后一次提交的信息
+如果你不需要撤销代码，只需修改 Commit Message：
+bash
+git commit --amend -m "新的提交信息"

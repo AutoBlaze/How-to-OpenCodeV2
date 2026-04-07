@@ -1,0 +1,195 @@
+第一章：打开OpenCode
+CHAPTER#1: Meet Your OpenCode
+
+# 什么是OpenCode
+OpenCode 是一个免费开源项目，是一个在终端里运行的 AI 编程助手，与几乎所有主流大模型都可以搭配使用。
+
+你可以用它进行Vibe Coding，你说一句话，它帮你：分析需求、修改代码、执行命令、自动完成多步任务。
+
+不懂编程的普通人也可以用OpenCode写代码、做App、协助办公，以及更多无限可能。
+
+它被称为Claude Code的高性价比平替。对于国内用户，在Anthropic 反花+封号+需要海外信用卡等缺点的情况下，OpenCode确实是一个不错的选择。
+
+# 安装OpenCode
+网络上安装教程非常多，不重复造车轮了
+记得安装前置软件，如Node.js，python，Git等
+
+Windows常见安装方式：
+进入管理员权限的powershell
+输入 npm install -g opencode-ai
+
+# 使用OpenCode的方式
+1. 最常用就是在cmd终端/powershell里直接使用，稳定，但是对于编程新手需要适应终端界面和指令操作（但其实也没那么难）。
+2. 使用VS Code或者Cursor等IDE。先安装OpenCode，再在VS Code里安装OpenCode插件。好处是可以适配程序员编程习惯、实时看到文件资源器、可视化github管理。
+3. Warp这种第三方终端。界面简单，有指令记忆功能，可以看到文件资源器。但是经常卡死，不推荐。
+
+#启动 OpenCode 并进入项目
+在PowerShell里输入
+cd ~/your-project  # 需要整个换成项目的绝对路径
+opencode
+
+# 新手模型选择
+新手优先使用OpenCode自带的免费model，不需要配置API KEY，不折腾，打开即用
+缺点：短时间内不能连续使用太多次，有rate limit
+
+#CLI常用指令
+这里的CLI指令用于没有进入OpenCode之前，在终端界面里使用
+
+以opencode开头，加上下面后缀
+标志	简写	描述
+--continue	-c	继续上一个会话
+--session	-s	后面加要继续的会话 ID
+--fork		继续时分叉会话（与 --continue 或 --session 配合使用）
+
+列出所有可用的代理：opencode agent list
+为任何想要使用的提供商配置 API 密钥：opencode auth login
+（密钥存储在 ~/.local/share/opencode/auth.json 中。）
+列出凭据文件中存储的所有已认证提供商：opencode auth list
+从凭据文件中清除提供商信息以完成登出：opencode auth logout
+列出已配置提供商的所有可用模型：opencode models [provider]
+刷新模型缓存： opencode models --refresh
+列出所有 OpenCode 会话：opencode session list (按q退出）
+列出所有 OpenCode 会话：opencode session list -n [number]
+更新到最新版本：opencode upgrade
+更新到指定版本：opencode upgrade v0.1.48
+查看版本号：opencode -v
+（[]不需要输入，只是表示该内容是optional）
+
+常看常新：https://opencode.ai/docs/zh-cn/cli/
+
+#TUI常用指令
+TUI指令用于从终端或者IDE进入opencode之后使用
+
+## 用 / 调用斜杠命令
+常用斜杠命令速览（TUI指令）：
+
+命令	作用
+/help	查看帮助
+/new	新建会话
+/models	选择模型
+/connect  添加model provider
+/init	创建或更新 AGENTS.md 文件
+/sessions 选择对话
+/compact 压缩过长的上下文
+/undo	撤回上一步操作（需要git配合）
+/theme	切换主题
+/exit	退出，/q
+
+常看常新：https://opencode.ai/docs/zh-cn/tui/
+
+## 常用快捷键
+快捷键	作用
+Tab	切换 Plan/Build 模式
+Ctrl+C	中断当前操作（在有些IDE里是复制，TUI界面里一般选中文字右键就可以复制）
+Ctrl+L	清屏
+Ctrl+X	Leader 键（前缀键）
+:q	退出OpenCode，返回终端
+Esc	取消/返回
+
+Ctrl+X → n    # 新建会话
+Ctrl+X → l    # 会话列表
+Ctrl+X → m    # 模型列表
+
+
+## 更多快捷键
+model_list	<leader>m	模型列表
+model_cycle_recent	f2	切换最近模型
+model_cycle_recent_reverse	shift+f2	反向切换
+model_cycle_favorite	none	切换收藏模型
+agent_list	<leader>a	Agent 列表
+agent_cycle	tab	切换 Agent
+agent_cycle_reverse	shift+tab	反向切换 Agent
+
+session_new	<leader>n	新建会话
+session_list	<leader>l	会话列表
+session_rename	<leader>w	重命名会话
+sidebar_toggle	<leader>b	切换侧边栏
+status_view	<leader>s	状态视图
+tips_toggle	<leader>h	切换首页提示
+messages_first	home	跳到第一条
+messages_last	end	跳到最后一条
+（有些快捷键是我自己修改或者新设，详见tui.json）
+
+?待解决问题
+command_list	ctrl+p	命令面板。
+我改成了ctrl+shift+p。这个快捷键在vscode里使用时，打开的是vscode的一个命令搜索界面，和opencode无关。改了键位之后依然无效。
+已解决：在vscode有按键冲突。在原生powershell或cmd终端里是可以使用的。
+
+## 用 @ 引用文件
+这是 OpenCode 最强大的功能——让 AI 直接读取你的文件。
+注意，输入 @ 后会看到 Agent 列表（如 @explore）和文件夹。继续输入文件名的部分内容（如 @pack），才会搜索并显示匹配的具体文件，用方向键选择后按 Enter 确认。
+
+## 用 ! 开头执行命令
+这是一个非常方便的操作，可以直接在opencode里执行终端命令，减少不确定性，加快执行速度。当然，不缺token的话，可以尽量用自然语言让AI去执行终端命令。
+
+?待解决问题
+之前在OpenCode的对话框里输入！就会直接进入powershell模式，很方便，但是现在复现不了了。很奇怪。
+有时候又ok。暂时没找到确切的原因。
+
+
+# OpenCode核心工具
+工具	干什么	类比
+read	读取文件或目录	打开文件看内容
+write	创建或覆盖文件	另存为
+edit	精确替换文件中的文本	查找替换
+bash	执行 Shell 命令	在终端敲命令
+grep	按内容搜索文件	全局搜索
+glob	按文件名搜索文件	文件管理器里搜文件名
+Task	创建子 Agent 处理复杂任务	创建帮手团队执行任务
+WebFetch	获取网页内容	联网搜索
+TodoWrite	任务清单管理（AI 自动使用）	复杂任务时创建任务清单，防止 AI "忘事"或"走偏"
+Skill	加载专业知识包	Skill 系列
+
+## 额外说明
+grep 和 glob 都最多返回 100 条结果。如果结果被截断，可以：
+缩小搜索目录（"只在 src 目录下搜索"）
+用更精确的关键词
+过滤文件类型（"只搜索 .ts 文件"）
+
+你不需要手动调用这些工具。你只管用自然语言描述需求，AI 会自动选择合适的工具。
+
+## 聪明的edit工具
+为什么 edit 是 OpenCode 最聪明的工具。它不是简单地"改第几行"，而是用字符串匹配来精确定位要修改的位置。
+
+edit 工具有 9 层匹配策略，从严格到宽松逐层尝试：
+
+策略	说明	例子
+精确匹配	完全一致	foo 匹配 foo
+行首尾空白忽略	忽略每行开头结尾的空格	foo 匹配 foo
+首尾行锚点	用第一行和最后一行定位代码块	函数开头和结尾匹配
+空白规范化	多个空格当一个	a b 匹配 a b
+缩进容错	忽略整体缩进差异	2 空格缩进匹配 4 空格
+转义字符处理	处理 \n、\t 等	a\nb 匹配实际换行
+边界修剪	去掉首尾空白后匹配	前后有空行也能匹配
+上下文感知	用首尾行 + 中间内容相似度	代码块略有变化也能匹配
+多处匹配	找到所有精确匹配	配合 replaceAll 使用
+
+简单说：你给 AI 的代码片段不需要和文件里的完全一致，有点缩进差异、空格差异都没关系。
+
+如果 oldString 在文件中出现了多次，edit 会报错：
+Found multiple matches for oldString.
+Provide more surrounding lines in oldString to identify the correct match.
+
+解决方法：
+让 AI 提供更多上下文（多包含几行代码），确保唯一匹配
+或者用 replaceAll 参数一次性替换所有匹配
+
+
+# 高级功能
+## Fork 会话
+为什么需要？
+有时候你想从对话的某个节点"分叉"出去，尝试不同的方向，但又不想丢掉原来的对话。Fork 就是干这个的。
+
+Fork 会复制当前会话的所有历史消息，创建一个新会话。新会话的标题会加上 (fork #1) 后缀，再次 Fork 则递增为 (fork #2)、(fork #3)……
+
+操作方式：
+在终端界面使用CLI指令 opencode -c --fork可以给最近的一个会话进行分叉操作
+
+在TUI里，Fork 没有默认快捷键，你可以在tui.json 中给它绑一个：
+{
+  "keybinds": {
+    "session_fork": "<leader>f"
+  }
+}
+配置后，按 Ctrl+X f 就能 Fork 当前会话。
+你应该看到：新会话出现，标题类似 原标题 (fork #1)
