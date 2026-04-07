@@ -6,19 +6,19 @@
 
 ## 📋 目录
 
-- [什么是 OpenCode](#什么是opencode)
-- [安装 OpenCode](#安装opencode)
-- [使用 OpenCode 的方式](#使用opencode的方式)
-- [启动 OpenCode 并进入项目](#启动-opencode-并进入项目)
-- [新手模型选择](#新手模型选择)
-- [CLI 常用指令](#cli-常用指令)
-- [TUI 常用指令](#tui-常用指令)
-- [OpenCode 核心工具](#opencode核心工具)
-- [高级功能](#高级功能)
+- [什么是 OpenCode](#what-is-opencode)
+- [安装 OpenCode](#install-opencode)
+- [使用 OpenCode 的方式](#usage-modes)
+- [启动 OpenCode 并进入项目](#start-project)
+- [新手模型选择](#model-selection)
+- [CLI 常用指令](#cli-commands)
+- [TUI 常用指令](#tui-commands)
+- [OpenCode 核心工具](#core-tools)
+- [高级功能](#advanced-features)
 
 ---
 
-## 💡 什么是 OpenCode
+## 💡 什么是 OpenCode <a id="what-is-opencode"></a>
 
 OpenCode 是一个免费开源项目，是一个在终端里运行的 **AI 编程助手**，与几乎所有主流大模型都可以搭配使用。
 
@@ -35,7 +35,7 @@ OpenCode 是一个免费开源项目，是一个在终端里运行的 **AI 编�
 
 ---
 
-## 🚀 安装 OpenCode
+## 🚀 安装 OpenCode <a id="install-opencode"></a>
 
 > ⚠️ **前置要求**：安装前需确保已安装 Node.js、Python、Git 等前置软件。
 
@@ -51,7 +51,7 @@ npm install -g opencode-ai
 
 ---
 
-## 📌 使用 OpenCode 的方式
+## 📌 使用 OpenCode 的方式 <a id="usage-modes"></a>
 
 ### 1. 终端直接使用
 
@@ -76,7 +76,7 @@ npm install -g opencode-ai
 
 ---
 
-## ⚡ 启动 OpenCode 并进入项目
+## ⚡ 启动 OpenCode 并进入项目 <a id="start-project"></a>
 
 在 PowerShell 里输入：
 
@@ -87,7 +87,7 @@ opencode
 
 ---
 
-## ✅ 新手模型选择
+## ✅ 新手模型选择 <a id="model-selection"></a>
 
 > 💡 **建议**：新手优先使用 OpenCode 自带的免费 Model，不需要配置 API KEY，不折腾，打开即用
 
@@ -95,7 +95,7 @@ opencode
 
 ---
 
-## 🔧 CLI 常用指令
+## 🔧 CLI 常用指令 <a id="cli-commands"></a>
 
 > 📖 **说明**：CLI 指令用于没有进入 OpenCode 之前，在终端界面里使用
 
@@ -150,7 +150,7 @@ opencode -v
 
 ---
 
-## 🖥️ TUI 常用指令
+## 🖥️ TUI 常用指令 <a id="tui-commands"></a>
 
 > 📖 **说明**：TUI 指令用于从终端或者 IDE 进入 OpenCode 之后使用
 
@@ -214,7 +214,7 @@ opencode -v
 | messages_first | `Home` | 跳到第一条 |
 | messages_last | `End` | 跳到最后一条 |
 
-> 💡 **备注**：有些快捷键是自定义的，详见 `tui.json`
+> 💡 **备注**：有些快捷键是作者自定义的，详见 `opencode_config/tui.json`
 
 ---
 
@@ -246,7 +246,7 @@ opencode -v
 
 ---
 
-## 🛠️ OpenCode 核心工具
+## 🛠️ OpenCode 核心工具 <a id="core-tools"></a>
 
 | 工具 | 作用 | 类比 |
 |------|------|------|
@@ -310,7 +310,7 @@ Edit 工具有 **9 层匹配策略**，从严格到宽松逐层尝试：
 
 ---
 
-## 🚀 高级功能
+## 🚀 高级功能 <a id="advanced-features"></a>
 
 ### Fork 会话
 

@@ -6,22 +6,22 @@
 
 ## 📋 目录
 
-- [什么是 Primary Agent 和 Subagent](#什么是-primary-agent-和-subagent)
-- [OpenCode 内置 Agent 速览](#opencode-内置-agent-速览)
-- [练习调用 Explore Agent](#练习调用-explore-agent)
-- [练习调用 General Agent](#练习调用-general-agent)
-- [实战练习](#实战练习)
-- [查看 Agent 列表](#查看-agent-列表)
-- [撤销操作](#撤销操作)
-- [TODO 跟踪进度](#todo-跟踪进度)
-- [项目初始化](#项目初始化)
-- [规则文件](#规则文件)
-- [进阶技巧](#进阶技巧)
-- [环境变量配置](#环境变量配置)
+- [什么是 Primary Agent 和 Subagent](#primary-subagent)
+- [OpenCode 内置 Agent 速览](#agent-overview)
+- [练习调用 Explore Agent](#explore-agent)
+- [练习调用 General Agent](#general-agent)
+- [Build Agent实战练习](#practice)
+- [查看 Agent 列表](#agent-list)
+- [撤销操作](#undo)
+- [TODO 跟踪进度](#todo-tracking)
+- [项目初始化](#project-init)
+- [规则文件](#rules)
+- [进阶技巧](#advanced-tips)
+- [其他：环境变量配置](#env-config)
 
 ---
 
-## 💡 什么是 Primary Agent 和 Subagent
+## 💡 什么是 Primary Agent 和 Subagent <a id="primary-subagent"></a>
 
 **Plan** 和 **Build** 是 OpenCode 内置的两个 **Primary Agents**（主要助手）：
 
@@ -34,7 +34,7 @@
 
 ---
 
-## 🚀 OpenCode 内置 Agent 速览
+## 🚀 OpenCode 内置 Agent 速览 <a id="agent-overview"></a>
 
 | Agent | 类型 | 擅长 | 默认权限 |
 |-------|------|------|----------|
@@ -45,7 +45,7 @@
 
 ---
 
-## 🔍 练习调用 Explore Agent
+## 🔍 练习调用 Explore Agent <a id="explore-agent"></a>
 
 > 📖 **为什么**：让专业的代码探索 Agent 帮你理解项目。
 
@@ -87,7 +87,7 @@
 
 ---
 
-## 📚 练习调用 General Agent
+## 📚 练习调用 General Agent <a id="general-agent"></a>
 
 > 📖 **为什么**：General Agent 擅长复杂研究和多步骤任务。
 
@@ -99,7 +99,7 @@
 
 ---
 
-## 💪 实战练习
+## 💪 Build Agent实战练习 <a id="practice"></a>
 
 在 **Build Agent** 模式下输入：
 
@@ -109,7 +109,7 @@
 
 ---
 
-## 📋 查看 Agent 列表
+## 📋 查看 Agent 列表 <a id="agent-list"></a>
 
 > 📖 **了解当前有哪些 Agent 可用**。
 
@@ -119,7 +119,7 @@
 
 ---
 
-## ↩️ 撤销操作
+## ↩️ 撤销操作 <a id="undo"></a>
 
 如果不满意，可以撤销。
 
@@ -129,7 +129,7 @@
 
 ---
 
-## ✅ TODO 跟踪进度
+## ✅ TODO 跟踪进度 <a id="todo-tracking"></a>
 
 > 📖 **复杂任务时，可以明确告诉 AI 用 TODO 跟踪进度**：
 
@@ -141,7 +141,7 @@
 
 ---
 
-## 🚀 项目初始化
+## 🚀 项目初始化 <a id="project-init"></a>
 
 ### 为什么需要初始化
 
@@ -156,7 +156,7 @@
 
 ---
 
-## 📄 规则文件
+## 📄 规则文件 <a id="rules"></a>
 
 > 📖 **OpenCode 会按以下顺序查找规则文件**：
 
@@ -217,7 +217,7 @@ opencode
 也可以带参数执行：
 
 ```bash
-/init 特别关注 TypeScript 类型安全和错误处理
+/init 这是一个XXX项目，需要特别关注XXXX问题
 ```
 
 ---
@@ -243,7 +243,7 @@ opencode
 
 ---
 
-## 🛠️ 进阶技巧
+## 🛠️ 进阶技巧 <a id="advanced-tips"></a>
 
 ### 1. 进阶：使用 opencode.json 加载更多规则
 
@@ -291,7 +291,7 @@ opencode
 虽然 OpenCode 不会自动解析文件引用，但你可以在 `AGENTS.md` 中显式指示 AI 读取外部文件，以下是示范：
 
 ```markdown
-【# 项目规则
+# 项目规则
 
 ## 外部文件引用
 当遇到文件引用（如 `@docs/xxx.md`）时，使用 Read 工具按需加载：
@@ -303,12 +303,12 @@ opencode
 TypeScript 风格：@docs/typescript-guidelines.md
 React 组件模式：@docs/react-patterns.md
 REST API 设计：@docs/api-standards.md
-测试策略：@test/testing-guidelines.md】
+测试策略：@test/testing-guidelines.md
 ```
 
 ---
 
-## ⚙️ 环境变量配置
+## ⚙️ 其他：环境变量配置 <a id="env-config"></a>
 
 ### 通过系统设置（永久生效）
 

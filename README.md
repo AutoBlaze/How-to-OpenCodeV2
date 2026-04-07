@@ -1,14 +1,14 @@
 # Quick OpenCode
 
-> 🚀 一个 user-friendly、简洁高效的 OpenCode AI 编程助手学习教材
+> 🚀 一个面向新手、简洁高效的 OpenCode AI 编程助手学习教材
 
 ---
 
 ## 📖 简介
 
-**Quick OpenCode** 是一个开源的 OpenCode 学习项目，旨在帮助零基础用户快速掌握 OpenCode 这款强大的 AI 编程助手。灵感来源于GitHub上的开源学习项目“learn-opencode”。
+**Quick OpenCode** 是一个开源的 OpenCode 学习项目，旨在帮助零基础用户快速掌握 OpenCode 这款强大的 AI 编程助手。灵感来源于作者通过 GitHub 上的开源教程 “learn-opencode” 的自学经历。本教学属于作者的学习笔记，特点是简洁高效、知识密集、方便查阅。
 
-OpenCode 是一个免费开源的 AI 编程助手，支持几乎所有主流大模型。通过本教程，你将学会：
+**OpenCode** 是一个免费开源的 AI 编程助手，支持几乎所有主流大模型。通过本教程，你将学会：
 
 - 🎯 快速上手 OpenCode 基础操作
 - 🤖 掌握 AI Agent 的高级用法
@@ -75,7 +75,7 @@ OpenCode 是一个免费开源的 AI 编程助手，支持几乎所有主流大�
 
 ## 🚀 快速开始
 
-### 直接在GitHub上查看学习教程
+### 直接在GitHub上查看本学习教程
 
 ### 1. 安装 OpenCode
 
@@ -103,22 +103,24 @@ opencode
 2. 🤖 阅读 `Tutorial#2_Use_AI_Agent.md` 学习 AI Agent 使用
 3. 📚 查看 `github_tutorial.md` 学习 Git 操作
 4. ⚙️ 参考 `opencode_config/example_opencode.json` 配置模型
-5. 🌐 访问 [learnopencode.com](https://learnopencode.com/) 学习完整课程
+5. 🌐 访问 [learnopencode.com](https://learnopencode.com/) 学习更详细课程
 
 ---
 
 ## 🤝 贡献指南
 
-**作者**: 
+**本项目作者**: 
 自来火 (AutoBlaze)
-**原版贡献者**: 
-vbgate(learn-opencode作者)
+
+**learn-opencode作者**: 
+javazys
+loockluo 程哥
 
 本项目是一个开源学习项目，欢迎提出建议和改进意见。
 
 ### 贡献方式
 
-1. 🍴 Fork 本仓库
+1. 🍴 Fork 或 Star 本仓库
 2. 📝 提交 Issue 或建议
 3. 💡 分享你的学习心得
 
@@ -145,7 +147,7 @@ vbgate(learn-opencode作者)
 
 感谢 OpenCode 团队提供如此优秀的 AI 编程助手。
 
-参考教程：[learnopencode.com](https://learnopencode.com/)
+更多参考教程：[learnopencode.com](https://learnopencode.com/)
 
 ---
 
