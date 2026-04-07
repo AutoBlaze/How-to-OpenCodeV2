@@ -4,8 +4,7 @@
 这是一个在GitHub上开源的OpenCode学习项目，目的是生成一个user-friendly和简洁高效的线上学习教材。
 
 ## 项目结构
-- `Tutorial#1_Meet_Your_OpenCode.txt` - OpenCode 入门教程
-- `Tutorial#2.txt` - OpenCode 进阶教程
+- `Tutorial#开头的文件 - OpenCode 教程
 - `github_tutorial.md` - Git 操作全流程教程
 - `opencode_config/` - OpenCode 配置示例
 
@@ -16,7 +15,7 @@
 
 ## 代码规范
 - 使用简体中文
-- 教程文件使用中文命名
+- 合理美化md格式的教程，包括标题、字体、颜色，可以添加少量商务风格emoji
 - 代码块注明语言类型
 - 有序号的章节使用数字前缀（如 01-, 02-）
 

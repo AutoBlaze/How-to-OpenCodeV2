@@ -3,6 +3,9 @@
 backup/
 备份backup/
 
+# 工具文件夹
+.workTools/
+
 # vscode 配置文件
 .vscode/
 
