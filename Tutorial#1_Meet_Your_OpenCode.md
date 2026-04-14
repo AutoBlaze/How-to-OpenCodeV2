@@ -78,12 +78,14 @@ npm install -g opencode-ai
 
 ## ⚡ 启动 OpenCode 并进入项目 <a id="start-project"></a>
 
-在 PowerShell 里输入：
+在 PowerShell/CMD 里输入：
 
 ```bash
 cd ~/your-project  # 换成你的项目绝对路径
 opencode
 ```
+
+💡<font color="blue">**小技巧**</font>：Windows系统在**文件夹的地址栏**里直接输入cmd，即可以进入终端。此时终端工作目录就是刚才的文件夹目录，非常方便。
 
 ---
 

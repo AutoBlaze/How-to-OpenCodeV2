@@ -110,10 +110,10 @@ opencode
 ## 🤝 贡献指南
 
 **本项目作者**: 
-自来火 (AutoBlaze)
+AutoBlaze（自来火）
 
 **learn-opencode作者**: 
-javazys
+javazys  
 loockluo 程哥
 
 本项目是一个开源学习项目，欢迎提出建议和改进意见。
@@ -155,6 +155,6 @@ loockluo 程哥
 
 **Happy Coding! 🚀**
 
-Made with ❤️ by 自来火 (AutoBlaze)
+Made with ❤️ by AutoBlaze（自来火）
 
 </div>
