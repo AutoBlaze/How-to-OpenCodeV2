@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: OpenCode 官方文档（V2）
+    url: https://opencode.ai/v2/docs/
+    about: OpenCode 本身的问题请先查官方文档，或到官方仓库反馈
+  - name: OpenCode 官方 Changelog
+    url: https://opencode.ai/changelog
+    about: 查看各版本的变更，判断教程是否需要更新

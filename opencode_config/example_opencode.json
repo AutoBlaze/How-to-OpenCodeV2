@@ -1,17 +1,19 @@
 {
-  "$schema": "https://opencode.ai",
-  "model": "siliconflow-cn/Pro/moonshotai/Kimi-K2.5",
-  "provider": {
-    "siliconflow-cn": {
-      "options": {
-        "type": "openai-compatible",
-        "baseUrl": "https://api.siliconflow.cn/v1",
-        "apiKey": "sk-your-api-key"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "acme/qwen3-coder",
+  "providers": {
+    "acme": {
+      "name": "Acme",
+      "env": ["ACME_API_KEY"],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://llm.acme.example/v1"
+      },
+      "models": {
+        "qwen3-coder": {
+          "name": "Qwen 3 Coder"
+        }
       }
     }
-  },
-  
-  "plugin": []
-  
-  
+  }
 }

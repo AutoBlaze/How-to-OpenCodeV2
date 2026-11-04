@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-label="How-to-OpenCodeV2 — OpenCode V2 中文新手指南">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f9ff"/>
+      <stop offset=".55" stop-color="#eaf0ff"/>
+      <stop offset="1" stop-color="#efe9ff"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0891b2"/>
+      <stop offset="1" stop-color="#6d28d9"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx=".88" cy=".05" r=".65">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx=".08" cy=".98" r=".65">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#0f172a" stroke-opacity="0.05"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#grid)"/>
+  <rect width="1280" height="360" fill="url(#glow1)"/>
+  <rect width="1280" height="360" fill="url(#glow2)"/>
+
+  <g transform="translate(0,0)" font-family="'Segoe UI','Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Helvetica Neue',Arial,sans-serif">
+    <text x="72" y="150" font-size="66" font-weight="800" fill="url(#title)" textLength="676" lengthAdjust="spacingAndGlyphs">How to OpenCode V2</text>
+    <text x="74" y="206" font-size="34" font-weight="700" fill="#0f172a">中文新手指南 · Beginner's Guide</text>
+    <text x="74" y="248" font-size="20" fill="#475569">零基础上手 · 关键结论实测验证 · 版本与验证日期公开</text>
+
+    <g font-size="17" font-weight="600" text-anchor="middle">
+      <rect x="74" y="274" width="104" height="36" rx="18" fill="#ffffffcc" stroke="#0f172a26"/>
+      <text x="126" y="298" fill="#1e3a8a">V2 原生</text>
+      <rect x="192" y="274" width="104" height="36" rx="18" fill="#ffffffcc" stroke="#0f172a26"/>
+      <text x="244" y="298" fill="#1e3a8a">实测验证</text>
+      <rect x="310" y="274" width="104" height="36" rx="18" fill="#ffffffcc" stroke="#0f172a26"/>
+      <text x="362" y="298" fill="#1e3a8a">新手友好</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="800" y="52" width="412" height="256" rx="14" fill="#0c1224" stroke="#2b3760"/>
+      <path d="M800 66a14 14 0 0 1 14-14h384a14 14 0 0 1 14 14v26H800z" fill="#141c36"/>
+      <circle cx="826" cy="72" r="6" fill="#ff5f56"/>
+      <circle cx="846" cy="72" r="6" fill="#ffbd2e"/>
+      <circle cx="866" cy="72" r="6" fill="#27c93f"/>
+      <text x="1006" y="77" font-size="13" fill="#7f8db3" text-anchor="middle" font-family="'Cascadia Code',Consolas,Menlo,monospace">opencode</text>
+      <g font-family="'Cascadia Code',Consolas,Menlo,'Microsoft YaHei','PingFang SC',monospace" font-size="20">
+        <text x="828" y="132" fill="#4ade80">$ <tspan fill="#e6edff">opencode</tspan></text>
+        <text x="828" y="172" fill="#22d3ee">◆ <tspan fill="#9fb0d6">Build · v2.2.5</tspan></text>
+        <text x="828" y="212" fill="#a78bfa">› <tspan fill="#e6edff">/init</tspan></text>
+        <text x="828" y="252" fill="#4ade80">✓ <tspan fill="#9fb0d6">AGENTS.md 已生成</tspan></text>
+        <rect x="828" y="270" width="12" height="4" rx="1" fill="#22d3ee"/>
+      </g>
+    </g>
+  </g>
+</svg>

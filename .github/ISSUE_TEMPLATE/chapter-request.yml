@@ -1,0 +1,28 @@
+name: 💡 章节建议
+description: 希望教程增加的主题或内容
+title: "[建议] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提建议前，可以先看看 [路线图](https://github.com/AutoBlaze/How-to-OpenCodeV2/blob/main/ROADMAP.md)，确认这个主题是否已经在规划中。
+  - type: input
+    id: topic
+    attributes:
+      label: 主题
+      placeholder: 例如：用 OpenCode 整理 Excel 数据
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+      description: 你想解决什么问题？你是哪类读者（新手、办公、创作者、开发者）？
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充说明（可选）
+      description: 相关的官方文档、参考资料或你的想法

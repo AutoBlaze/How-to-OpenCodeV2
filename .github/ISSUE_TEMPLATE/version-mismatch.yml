@@ -1,0 +1,48 @@
+name: 🔄 版本不符
+description: 你的 OpenCode 版本行为和教程不一致
+title: "[版本不符] "
+labels: ["version-mismatch"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        OpenCode V2 更新很快，教程可能落后于新版本。这类反馈能帮助我们及时对齐。**请不要贴出 API Key、邮箱等隐私信息。**
+  - type: input
+    id: version
+    attributes:
+      label: OpenCode 版本
+      description: 运行 `opencode -v` 查看
+      placeholder: 2.3.0
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统和终端
+      placeholder: Windows 11 + PowerShell
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: 教程中的位置
+      description: 章节文件和标题
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 教程里写的
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 你实际看到的
+      description: 可以贴命令输出或界面描述（注意打码隐私信息）
+    validations:
+      required: true
+  - type: input
+    id: changelog
+    attributes:
+      label: 相关的官方 changelog 或文档链接（可选）
