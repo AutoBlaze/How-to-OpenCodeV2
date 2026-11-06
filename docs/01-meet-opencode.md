@@ -265,7 +265,7 @@ opencode debug paths db
 | `Shift + Tab` | TUI里切换 Agent（Plan / Build 等），V2 默认键位 |
 | `Ctrl + Enter` | 聊天框换行 |
 | `Ctrl + P` | 打开命令面板 |
-| `Esc` | 中断当前任务 |
+| `Esc` | 中断当前任务,按照提示按两次 |
 | `Ctrl + C` | 不选中任何文本是清空输入框。选中文本则是复制 |
 | `Ctrl + D` | 退出 OpenCode，返回终端 |
 | `Shift + Enter` | 输入框里换行 |

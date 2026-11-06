@@ -114,14 +114,14 @@ flowchart LR
 <details>
 <summary><b>OpenCode 要付费吗？</b></summary>
 
-OpenCode 本身免费开源。新手可以先用它自带的免费模型（有限额），也可以用 `/connect` 连接自己的模型 Key。详见 [第一章](docs/01-meet-opencode.md)。
+OpenCode 本身免费开源。新手可以先用它自带的免费模型（有限额），也有自己的按月订阅服务OpenCode Go。还可以用 `/connect` 连接自己的模型 Key。详见 [第一章](docs/01-meet-opencode.md)。
 
 </details>
 
 <details>
 <summary><b>我还在用 V1，怎么办？</b></summary>
 
-V1 和 V2 共用 `opencode` 命令，需要先卸载 V1 再安装 V2。V1 的配置大部分在 V2 里继续可用，官方迁移指南见 [Migrate from V1](https://opencode.ai/v2/docs/migrate-v1/)。
+V1 和 V2 共用 `opencode` 命令，需要先卸载 V1 再安装 V2。V1 的配置大部分在 V2 里继续可用，官方迁移指南见 [Migrate from V1](https://opencode.ai/v2/docs/migrate-v1/)。实在不会弄，可以让你现有的 Agent 帮你迁移（我就是这么干的）。
 
 </details>
 
@@ -135,7 +135,7 @@ Leader 组合键要**分两步按**：先按 `Ctrl+X` 并松开，再单独按�
 <details>
 <summary><b>教程会多久更新一次？</b></summary>
 
-OpenCode V2 更新很快。每次发布新的 minor 版本后，我会对照官方 changelog 核对教程，并在 [`VERSION.md`](VERSION.md) 更新适配版本、已实测结论和待验证清单。
+尽管 OpenCode V2 更新很快，但教程内容的适用性很强，大家可以放心使用。我会陆续更新更多具有实践性的章节教程，也是记录自己的实践成果。每次OpenCode发布新的重要版本后，我会对照官方 changelog 核对教程，并在 [`VERSION.md`](VERSION.md) 更新适配版本、已实测结论和待验证清单。
 
 </details>
 
@@ -151,9 +151,10 @@ OpenCode V2 更新很快。每次发布新的 minor 版本后，我会对照官�
 - ⭐ 觉得有用的话，点个 Star 就是最大的鼓励
 
 **本项目作者**：AutoBlaze（自来火）
-**learn-opencode 作者**：javazys、loockluo 程哥
 
 GitHub: [@AutoBlaze](https://github.com/AutoBlaze)　·　项目地址: https://github.com/AutoBlaze/How-to-OpenCodeV2
+
+微博 [@AutoBlaze自来火](https://weibo.com/u/2159604590)
 
 ---
 
@@ -171,14 +172,15 @@ GitHub: [@AutoBlaze](https://github.com/AutoBlaze)　·　项目地址: https://
 
 ## 🌟 致谢
 
-感谢 OpenCode 团队提供如此优秀的 AI 编程助手。灵感来源于 GitHub 上的开源教程 “learn-opencode”。
+感谢 OpenCode 团队提供如此优秀的 AI 编程助手。部分灵感来源于 GitHub 上的开源教程 “learn-opencode”。
 
-更多参考教程：[learnopencode.com](https://learnopencode.com/)　·　官方文档：[opencode.ai/v2/docs](https://opencode.ai/v2/docs/)
+更多参考教程：官方文档：[opencode.ai/v2/docs](https://opencode.ai/v2/docs/) ·　[learnopencode.com](https://learnopencode.com/)
 
 <div align="center">
 
 **Happy Coding! 🚀**
 
-Made with ❤️ by AutoBlaze（自来火）
+Made with ❤️ by AutoBlaze自来火
+
 
 </div>
